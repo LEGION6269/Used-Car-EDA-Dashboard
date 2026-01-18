@@ -4,7 +4,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import streamlit as st
 
-df=pd.read_csv(r"C:\Users\Lenovo\OneDrive\Desktop\Dataset_Folder\Cars_cleaned.csv")
+df = pd.read_csv("Cars_cleaned.csv")
 
 #--------------Config---------------
 
@@ -147,4 +147,5 @@ This project demonstrates a **complete data analyst workflow**:
 
 This dashboard can help **dealers, buyers, and pricing teams**
 make informed, data-driven decisions.
+
 """)
