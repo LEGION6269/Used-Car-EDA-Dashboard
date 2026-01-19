@@ -4,7 +4,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import streamlit as st
 
-df = pd.read_csv("Cars_cleaned.csv")
+df=pd.read_csv(r"C:\Users\Lenovo\OneDrive\Desktop\Dataset_Folder\Cars_cleaned.csv")
 
 #--------------Config---------------
 
@@ -23,7 +23,7 @@ df = load_data()
 
 #--------------Sidebar--------------
 
-st.sidebar.title('🫰Filters')
+st.sidebar.title('🔍Filters')
 
 location = st.sidebar.multiselect(
     'Select Location',
@@ -48,18 +48,18 @@ filtered_df = df[
 
 #---------------Title-----------
 
-st.title('🏎️Used Car Price Analysis Dashboard')
+st.title('🚗💨Used Car Price Analysis Dashboard')
 st.markdown('### End-to-End Exploratory Data Analysis (EDA) using streamlit')
 
 #---------------Introduction---------
 
-st.title('🍺Project Introduction')
+st.title('📝Project Introduction')
 st.markdown('''The used car market in India has grown rapidly and now exceeds the new car market.
             This dashboard performs ** end-to-end exploratory data analysis ** to identify key factors affecting used car practices''')
 
 #---------------Data Overview--------
 
-st.header('Dataset Overview')
+st.header('🎯Dataset Overview')
 
 col1, col2, col3 = st.columns(3)
 col1.metric('Total Records', df.shape[0])
@@ -121,6 +121,8 @@ fig3, ax3 = plt.subplots(figsize=(8, 5))
 sns.heatmap(corr, annot=True, cmap="coolwarm", ax=ax3)
 st.pyplot(fig3)
 
+#----------------
+
 # ---------------- KEY INSIGHTS ----------------
 
 st.header("💡 Key Business Insights")
@@ -135,7 +137,7 @@ st.markdown("""
 
 # ---------------- CONCLUSION ----------------
 
-st.header("🍷 Conclusion")
+st.header("🚩Conclusion")
 
 st.markdown("""
 This project demonstrates a **complete data analyst workflow**:
@@ -147,5 +149,4 @@ This project demonstrates a **complete data analyst workflow**:
 
 This dashboard can help **dealers, buyers, and pricing teams**
 make informed, data-driven decisions.
-
 """)
